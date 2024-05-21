@@ -1,0 +1,15 @@
+<h2>All Wow Games and extensions</h2>
+
+<ul class="gameContainer">
+  @for(game of games; track game.id) {
+  <li id="game_{{ game.id }}">
+    <a [routerLink]="['/game', game.id]">
+      <article>
+        <h3>title : {{ game.title }}</h3>
+        <img src="{{ game.img }}" alt="{{ game.title }}" />
+        <p>{{ game.description }}</p>
+      </article>
+    </a>
+  </li>
+  }
+</ul>

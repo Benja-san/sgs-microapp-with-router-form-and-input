@@ -1,11 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { Game } from '../game';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { GameCardComponent } from '../game-card/game-card.component';
 
 @Component({
   selector: 'app-game',
   standalone: true,
-  imports: [],
+  imports: [GameCardComponent],
   templateUrl: './game.component.html',
   styleUrl: './game.component.scss',
 })

@@ -1,3 +1,3 @@
 Homepage: display all games with link to each games check
-:Game (dynamic) display info of the targeted game
+:Game (dynamic) display info of the targeted game check -> input 
 add : add a new game

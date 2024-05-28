@@ -3,3 +3,15 @@
 } @else {
 <p>no game found here</p>
 }
+
+<section>
+  <h2>Commentaires</h2>
+  <ul>
+    @for(commentary of commentaries; track commentary) { @if(commentary.name ===
+    'Jane') {
+    <li>
+      <app-commentary-card [commentaryChild]="commentary"></app-commentary-card>
+    </li>
+    } }
+  </ul>
+</section>

@@ -1,1 +1,14 @@
 <h1>Potthead page</h1>
+
+<ul>
+  @for(character of characters; track character) {
+  <li id="character_{{ $index }}">
+    <h2>{{ character.name }} played by {{ character.actor }}</h2>
+    <img src="{{ character.image }}" alt="{{ character.name }}" />
+    <p>{{ character.name }} belongs to {{ character.house }}</p>
+    @if(character.house === "Hufflepuff") {
+    <p>BOoouuuh !</p>
+    }
+  </li>
+  }
+</ul>

@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { HarryPotterService } from '../service/harry-potter/harry-potter.service';
+import { HPCharacters } from '../model/HPCharacters/hpcharacters';
 
 @Component({
   selector: 'app-harry-potter',
@@ -10,10 +11,14 @@ import { HarryPotterService } from '../service/harry-potter/harry-potter.service
 })
 export class HarryPotterComponent {
   hpService: HarryPotterService = inject(HarryPotterService);
+  characters: HPCharacters[] = [];
 
   constructor() {}
 
   ngOnInit() {
-    this.hpService.getAllCharacters().subscribe((data) => console.log(data));
+    this.hpService
+      .getAllCharacters()
+      .subscribe((data) => (this.characters = data));
+    console.log(this.characters);
   }
 }

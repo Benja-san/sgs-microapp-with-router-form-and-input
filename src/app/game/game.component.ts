@@ -33,6 +33,10 @@ export class GameComponent {
     this.game = this.gameService.games.find((game) => game.id === this.gameId);
   }
 
+  sendLikeStateParent(likeState: number) {
+    alert('like state : ' + likeState);
+  }
+
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.gameId = parseInt(params.get('gameId') as string);
